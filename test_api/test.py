@@ -1,7 +1,28 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException,security
+# from fastapi.security import HTTPBasic,HTTPBearer,OAuth2PasswordBearer
 from fastapi.responses import JSONResponse
+# from pydantic import BaseModel
 app=FastAPI()
 
+# seurity = HTTPBasic()
+
+# class user(BaseModel):
+#     username:str
+#     password:str
+
+# users=[
+#     user(username='user1',password='password1'),
+#     user(username='user2',password='paswword2')
+# ]
+
+# def authenticate_user(username:str,password:str):
+#     for user in users:
+#         if user.username==username and user.password==password:
+#             return users
+#         return None
+# def authentication_user_pass(username):
+#     for user in :
+        
 #get_user
 @app.get('/')
 def health_check():
@@ -21,7 +42,7 @@ def add_user_data():
     return JSONResponse(content=insert_data)
 
 #delete_user
-@app.delete("user/data/{user_id}")
+@app.delete("/user/data/{user_id}")
 def delete_user_data(user_id:int):
     remove_data={"user_id":user_id,"user_data":"student1"}    
     return JSONResponse(content=remove_data)

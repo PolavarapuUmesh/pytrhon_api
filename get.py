@@ -1,5 +1,5 @@
 import requests
-response=requests.get("https://www.vedantu.com/home")
+response=requests.get("https://scheduling.vedantu.com/scheduling/session/getUserLatestActiveSessionFromCache?userId=5980003412213760&callingUserId=5980003412213760")
 print(response.status_code)
 if response.headers.get('Content-Type') == 'application/json':
     if response.text:
