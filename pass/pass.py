@@ -7,7 +7,7 @@ pwd=''.join(random.sample(s,pass_len))
 print("random_pass:",pwd)
 
 with open('password.txt','a') as f:
-    data= pass_gen+ '\n'+pwd+'\n\n'
+    data= pass_gen+ '\n'+pwd+'\n\n' 
     f.write(data)
     f.close()
 

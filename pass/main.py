@@ -1,4 +1,3 @@
-import secrets
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
@@ -19,5 +18,3 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
 
-pass_length=12
-print(secrets.token_bytes(pass_length))
