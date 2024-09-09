@@ -6,9 +6,9 @@ table = dynamodb.Table('MusicCollection')
 try:
     table.put_item(
         Item={
-            'Artist': 'ani_popudi', 
+            'Artist': 'jonus_blue', 
             'SongTitle': 'blue_ocean',  
-            'Album': 'belive',  
+            'Album': 'on_the_way',  
             'ReleaseYear': 2024  
         }
     )

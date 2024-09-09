@@ -8,3 +8,5 @@ with open('password.txt','a') as f:
     data=what+'\n'+pwd+'\n\n'
     f.write(data)
     f.close
+
+
