@@ -37,19 +37,18 @@
 
 
 import psycopg
+import boto3
 
-# Building the database connection
 
-    connection = psycopg.connect(
+connection = psycopg.connect(
         dbname="database-1",
         user="postgres_01",
         password="G6CDlIHxuY0wFRaVxI4L",
         host="database-1.chcsskyi4wa1.us-east-1.rds.amazonaws.com",
         port="5432"
     )
-    print("Successfully connected to database")
+print("Successfully connected to database")
 
-# Creating a cursor
 cursor = connection.cursor()
 
 cursor.execute("SELECT * FROM customers")
@@ -57,5 +56,5 @@ Datasets = cursor.fetchall()
 
 for data in datasets:
     print(row)
-
+psycopg
 cursor.close()

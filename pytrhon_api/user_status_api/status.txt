@@ -1,0 +1,15 @@
+GET /users/: Returns a list of all users
+GET /users/{user_id}: Returns a single user by ID
+POST /users/: Creates a new user
+PUT /users/{user_id}: Updates a user
+DELETE /users/{user_id}: Deletes a user
+
+The API uses the pydantic library to define a UserStatus model, which has two fields: id and status. The API also uses a simple in-memory data store to store the users, but in a real-world application, you would want to use a database.
+
+You can test the API using a tool like curl or a web browser. For example, to create a new user, you can use the following command:
+
+curl -X POST -H "Content-Type: application/json" -d '{"id": 4, "status": "active"}' http://localhost:8000/users/
+
+This should return the newly created user. You can then use the other endpoints to retrieve, update, or delete the user.
+
+Note that this is just a simple example, and you may want to add additional features such as authentication, input validation, and error handling to a real-world API
